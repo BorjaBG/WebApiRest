@@ -1,0 +1,12 @@
+body{
+    max-width: 1024px;
+    margin:auto;
+}
+
+#busqueda{
+    margin-top: 2em;
+}
+
+#lista{
+    margin-top: 2em;
+}
