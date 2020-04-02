@@ -35,13 +35,25 @@
 
         <div id="lista">
             <ul id="alumnos" class="list-group">
-                <li class="list-group-item"><img src="img/avatar1.png" alt="avatar">Ana</li>
+                <li class="list-group-item">Cargando...</li>
+                <!--<li class="list-group-item"><img src="img/avatar1.png" alt="avatar">Ana</li>
                 <li class="list-group-item"><img src="img/avatar2.png" alt="avatar">Veronica</li>
                 <li class="list-group-item"><img src="img/avatar3.png" alt="avatar">Pepe</li>
                 <li class="list-group-item"><img src="img/avatar4.png" alt="avatar">Julio</li>
-                <li class="list-group-item"><img src="img/avatar5.png" alt="avatar">Marta</li>
+                <li class="list-group-item"><img src="img/avatar5.png" alt="avatar">Marta</li>-->
             </ul>
         </div>
+
+        <script>
+            let lista = document.getElementById('lista');
+            var alumnos = ["Ana", "Veronica", "Pepe", "Julio", "Marta"];
+            var j = 1;
+            lista.innerHTML = '';
+            for(let i = 0; i < 5; i++){
+                lista.innerHTML += `<li class="list-group-item"><img src="img/avatar${j}.png" alt="avatar">${alumnos[i]}</li>`;
+                j++;
+            }
+        </script>
 
         <script src="js/main.js"></script>
 
