@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listado de peliculas</title>
+    </head>
+    <body>
+        
+        <div id="lista">
+            <ul id="peliculas">
+                <li>Cargando...</li>
+            </ul>
+        </div>
+
+        <script>
+            let lista = document.getElementById('lista');
+            lista.innerHTML = '';
+
+            let peliculas = [{
+                    "id": 1,
+                    "nombre": "El sexto sentido",
+                    "director": "M. Night Shyamamlan",
+                    "clasificacion": "Drama"
+                },
+                {
+                    "id": 2,
+                    "nombre": "Pulp Fiction",
+                    "director": "Tarantino",
+                    "clasificacion": "Accion"
+                },
+                {
+                    "id": 3,
+                    "nombre": "Todo sobre mi madre",
+                    "director": "Almodovar",
+                    "clasificacion": "Drama"
+                }
+            ];
+
+            for(let i = 0; i < 3; i++){
+                lista.innerHTML += `<ul>
+                <li> Titulo: ${peliculas[i].nombre} </li>
+                <li> Director: ${peliculas[i].director} </li>
+                <li> Clasificacion: ${peliculas[i].clasificacion} </li>
+                </ul>`;
+            }
+        </script>
+
+    </body>
+</html>

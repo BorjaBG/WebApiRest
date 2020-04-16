@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saludo</title>
+    </head>
+    <body>
+        <div>
+            <textarea id="campoTexto" placeholder="Escribe lo que quieras"></textarea>
+        </div>
+
+        <div>
+            <button id="boton">Boton</button>
+        </div>
+
+        <div>
+            <p id="parrafo"></p>
+        </div>
+
+        <script>
+            let elTexto = document.getElementById('campoTexto');
+            let elBoton = document.getElementById('boton');
+            let elParrafo = document.getElementById('parrafo');
+            
+            elBoton.addEventListener('click', obtener);
+
+            function obtener() {
+
+                elParrafo.innerHTML = '';
+
+                if(elTexto.value.trim() === ''){
+                    alert('No ha introducido nada');
+                }else{
+                    elParrafo.innerHTML = 'Saludos ' + elTexto.value;
+                }
+            }
+        </script>
+    </body>
+</html>
