@@ -34,6 +34,7 @@ window.addEventListener('load', init());
 /*let filtro = document.getElementById('selectorSexo');
 filtro.addEventListener("change", filtrado());*/
 
+//http://localhost:8080/apprest/api/personas
 function init(){
     console.debug('Archivo cargado');
     listar(alumnos);
