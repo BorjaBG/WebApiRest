@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/bootstrap/all.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <!-- Bootstrap -->
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 
@@ -33,12 +35,58 @@
             </div>
         </div>
 
-        <div id="lista">
-            <ul id="alumnos" class="list-group">
-                <li class="list-group-item">Cargando...</li>
-            </ul>
+        <div class="row">
+            <div class="col">
+                <div id="lista">
+                    <ul id="alumnos" class="list-group">
+                        <li class="list-group-item">Cargando...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col">
+                <button id="btnNuevo" type="button" class="btn btn-primary" onclick="seleccionar()"><i class="fas fa-plus"></i></button>
+                <div class="row formulario">
+                    <label for="">ID:</label>
+                    <input type="text" name="ID" id="formID" placeholder="ID" readonly>
+                </div>
+                <div class="row formulario">
+                    <label for="">Nombre:</label>
+                    <input type="text" name="Nombre" id="formNombre" placeholder="Nombre">
+                </div>
+                <div class="row formulario">
+                    <label for="">Avatar:</label>
+                    <select id="formSelectAvatar" class="selectpicker">
+                        <option value="avatar1.png">Avatar 1</option>
+                        <option value="avatar2.png">Avatar 2</option>
+                        <option value="avatar3.png">Avatar 3</option>
+                        <option value="avatar4.png">Avatar 4</option>
+                        <option value="avatar5.png">Avatar 5</option>
+                        <option value="avatar6.png">Avatar 6</option>
+                        <option value="avatar7.png">Avatar 7</option>
+                    </select>
+                </div>
+                <div class="row formulario">
+                    <label for="">Sexo:</label>
+                    <select id="formSexo" class="selectpicker">
+                        <option value="h">Hombre</option>
+                        <option value="m">Mujer</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-success formulario" onclick="guardar()"><i class="fas fa-save"></i></button>
+            </div>
         </div>
 
+        <!--<div>
+            <h3>Cursos</h3>
+            <div id="listaCursos">
+                <ul id="cursos" class="list-group">
+                    <li class="list-group-item">Cargando...</li>
+                </ul>
+            </div>
+        </div>-->
+
+        <script src="js/ajax.js"></script>
         <script src="js/main.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
