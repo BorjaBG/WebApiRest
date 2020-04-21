@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frutas</title>
+    </head>
+    <body>
+        <h1>Map, filter, reduce</h1>
+        <p><a href="">Programacion funcional GIF</a></p>
+        <p><a href="">Programacion funcional explicacion grafica</a></p>
+        <p><a href="">Programacion funcional explicacion ampliada</a></p>
+
+        <script>
+
+            const frutas = [
+                {
+                    "nombre": "fresa",
+                    "precio": 4.56,
+                    "oferta": true,
+                    "descuento": 50,
+                    "colores" : [ "rojo" ]
+                },
+                {
+                    "nombre": "manzana",
+                    "precio": 1.99,
+                    "oferta": false,
+                    "descuento": 50,
+                    "colores" : [ "rojo","verde","amarillo" ]
+                },
+                {
+                    "nombre": "kiwi",
+                    "precio": 3.00,
+                    "oferta": false,
+                    "descuento": 10,
+                    "colores" : [ "verde","amarillo" ]
+                }
+                
+            ];
+
+            //console.info(frutas);
+
+            //Nombre de las frutas
+            const frutasNombres = frutas.map( fruta => { 
+                console.debug(fruta);
+                return fruta.nombre;
+            });
+            console.info(frutasNombres);
+
+            //Filtrar frutas en oferta
+            /*const frutasOferta = frutas.filter( el => {
+                return el.oferta == true;
+            });
+            console.info('frutasOferta ', frutasOferta);*/
+
+            console.info('Frutas en oferta');
+            console.info(frutas.filter( el => el.oferta).map( el => el.nombre));
+
+            //Precio total de todas las frutas
+            const valorInicial = 0;
+            const totalPrecio = frutas.map( el => el.precio ).reduce( (previous, current) => {
+                /*console.debug('previous ' + previous);
+                console.debug('current ' + current);*/
+                return previous + current;
+
+            }, valorInicial );
+            console.info('totalPrecio= ' + totalPrecio);
+
+            //Precio total de las frutas pero con descuento
+            console.info('Precio total con descuentos incluidos');
+            console.info(frutas.map( el => {
+                                                if(el.oferta){
+                                                    return (el.precio - ((el.precio * el.descuento)/100));
+                                                }else{
+                                                    return el.precio;
+                                                }
+                                            }
+            ).reduce((p,c) => p + c, 0));
+
+            //Colores de las frutas
+            /*const frutasColores = frutas.map( fruta => { 
+                console.debug(fruta);
+                return fruta.colores;
+            });
+            console.info(frutasColores);*/
+
+            console.info( frutas.map(el => el.colores)
+                                .reduce( (p,c) => p.concat(c)
+                                ));
+
+
+        </script>
+
+
+    </body>
+</html>
