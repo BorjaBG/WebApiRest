@@ -1,7 +1,7 @@
 # WebApiRest
 Proyecto de repaso que contiene dos proyectos, restApi y web.
 
-![img1] (https://raw.githubusercontent.com/BorjaBG/WebApiRest/blob/master/Screenshot%20from%202020-04-23%2010-49-26.png "Menu principal")
+![img1] (https://github.com/BorjaBG/WebApiRest/blob/master/Screenshot%20from%202020-04-23%2010-49-26.png "Menu principal")
 
 ## AppCliente
 Aqui podemos encontrar todo lo relacionado con la parte de frontend de la aplicacion.
