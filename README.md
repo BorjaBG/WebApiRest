@@ -20,3 +20,25 @@ Para cambiar el endpoint, las APIs de donde coge la informacion, tendriamos que 
 
 
 `const endpoint2 = 'http://localhost:8080/apprest/api/cursos/'`
+
+## AppRest
+Aqui podemos encontrar todo lo relacionado con la API-REST de la aplicacion
+
+- Tecnologias:
+    - Java
+
+Para cambiar la base de datos tendremos que entrar en el archivo "context.xml".
+
+
+
+`url="jdbc:mysql://127.0.0.1:3306/alumnos"`
+
+
+
+`username="root"`
+
+
+
+`password="admin"`
+
+
