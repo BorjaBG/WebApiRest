@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.30, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: alumnos
 -- ------------------------------------------------------
--- Server version	5.7.29-0ubuntu0.18.04.1
+-- Server version	5.7.30-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,11 +23,9 @@ DROP TABLE IF EXISTS `cursosAlumnos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cursosAlumnos` (
-  `id` int(11) NOT NULL,
   `idCursos` int(11) NOT NULL,
   `idAlumnos` int(11) NOT NULL,
-  PRIMARY KEY (`idCursos`,`idAlumnos`,`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
+  PRIMARY KEY (`idCursos`,`idAlumnos`),
   KEY `fk_cursos_has_alumnos_alumnos1_idx` (`idAlumnos`),
   KEY `fk_cursos_has_alumnos_cursos_idx` (`idCursos`),
   CONSTRAINT `fk_cursos_has_alumnos_alumnos1` FOREIGN KEY (`idAlumnos`) REFERENCES `alumnos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -41,6 +39,7 @@ CREATE TABLE `cursosAlumnos` (
 
 LOCK TABLES `cursosAlumnos` WRITE;
 /*!40000 ALTER TABLE `cursosAlumnos` DISABLE KEYS */;
+INSERT INTO `cursosAlumnos` VALUES (2,1),(3,1),(1,2),(3,2),(2,3),(1,4),(3,4),(1,5);
 /*!40000 ALTER TABLE `cursosAlumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-21  9:45:15
+-- Dump completed on 2020-06-01 13:53:32

@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cursos`
+-- Table structure for table `noticias`
 --
 
-DROP TABLE IF EXISTS `cursos`;
+DROP TABLE IF EXISTS `noticias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cursos` (
+CREATE TABLE `noticias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) COLLATE ucs2_spanish2_ci NOT NULL,
-  `imagen` varchar(255) COLLATE ucs2_spanish2_ci NOT NULL,
-  `precio` decimal(10,0) NOT NULL,
+  `contenido` longtext NOT NULL,
+  `titulo` mediumtext NOT NULL,
+  `fecha` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=ucs2 COLLATE=ucs2_spanish2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cursos`
+-- Dumping data for table `noticias`
 --
 
-LOCK TABLES `cursos` WRITE;
-/*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
-INSERT INTO `cursos` VALUES (1,'JavaEE','https://www.imaginae.net/wp-content/uploads/2018/03/java_ee_logo_vert_v2.png',100),(2,'HTML5','https://cdn.pixabay.com/photo/2018/05/08/21/28/html5-3384014_960_720.png',65),(3,'Java8','https://www.imaginae.net/wp-content/uploads/2018/03/java_ee_logo_vert_v2.png',80);
-/*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
+LOCK TABLES `noticias` WRITE;
+/*!40000 ALTER TABLE `noticias` DISABLE KEYS */;
+INSERT INTO `noticias` VALUES (1,'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus vel mauris vel lacinia. Integer condimentum urna nisl, eget dignissim ligula mattis vitae. Duis faucibus gravida sem, eu pulvinar ligula pellentesque vehicula. Donec quam mi, pulvinar quis nunc eget, rhoncus feugiat felis. Maecenas faucibus quis orci et fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque porta ipsum vel dolor tempor, in molestie leo pellentesque. Vivamus vulputate purus nec finibus ultricies. Nulla facilisi. Proin scelerisque laoreet lacus vel vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. In orci dolor, semper in ultricies sit amet, efficitur in ex. Vestibulum viverra mi sed nibh elementum, lobortis commodo velit vestibulum. In vel urna nec eros aliquet dapibus nec vel nibh. </p>','Etiam vitae laoreet augue. Donec efficitur fermentum','2020-04-26');
+/*!40000 ALTER TABLE `noticias` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
